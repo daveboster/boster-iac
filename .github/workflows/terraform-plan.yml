@@ -2,6 +2,9 @@ name: "Terraform Plan"
 
 on:
   pull_request:
+    paths:
+      - '.github/workflows/terraform-*.yml'
+      - 'src/**/*.tf'
 
 env:
   TF_CLOUD_ORGANIZATION: "${{ secrets.TF_CLOUD_ORGANIZATION }}"
